@@ -1,0 +1,37 @@
+body{
+    background-color: rgb(188, 180, 180);
+}
+.global{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+h1{
+    text-align: center;
+    font-size: 60px;
+    margin-top: 200px;
+
+}
+span{
+    margin-left: 750px;
+    font-size: 100px;
+    margin-top: 100px;
+}
+.btn{
+    margin-left: 550px;
+    padding-top: 50px;
+    display: flex;
+    gap: 20px;
+}
+.black{
+    width: 150px;
+    height: 30px;
+    border: black solid ;
+    font-weight: bold;
+    
+}
+.black:hover{
+    background-color: black;
+    color: white;
+}
+
