@@ -26,7 +26,7 @@ function Incrémenter(){
         inc.style="color: purple";
         
 }
-if (x==0){
+if (x==0) {
     inc.style="black";
 }
 }
