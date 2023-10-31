@@ -5,23 +5,24 @@ var plus= document.getElementById("plus");
 
  function createList (){
     var li = document.createElement("li");
-   //  li.classList.add("liStyle");
-    li.appenChild(document.createTextNode(inp.value));
+    li.classList.add("liStyle");
+    li.appendChild(document.createTextNode(inp.value));
     ul.appendChild(li);
     inp.value = "";
 
-   //  var dbtn = document.createElement("button");
-   // //  dbtn.classList.add("modif");
-   //  dbtn.appendChild(document.createTextNode("x"));
-   //  li.appenChild(dbtn);
-   //  dbtn.addEventListener("click", deleteListItem);
+    var dbtn = document.createElement("button");
+    dbtn.classList.add("modif");
+    dbtn.classList.add("deleteStyle");
+    dbtn.appendChild(document.createTextNode("x"));
+    li.appendChild(dbtn);
+    dbtn.addEventListener("click", deleteListItem);
+
+  
 
 
-
-
-   //  function deleteListItem(){
-   //    dbtn.classList.add("delete");
-   //  }
+    function deleteListItem(){
+      li.classList.add("delete");
+    }
  }
 
 

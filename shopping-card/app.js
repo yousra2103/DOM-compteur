@@ -3,6 +3,9 @@ let openShopping = document.querySelector(".container1");
 let closeShopping= document.querySelector(".closeShopping");
 let body = document.querySelector("body");
 let listCard = document.querySelector(".listCard");
+let quantite=document.querySelector(".quantite");
+let total=document.querySelector(".total");
+let listProduit = [];
 
 let product = [{
     id: 1,
@@ -68,7 +71,7 @@ function addProduit(){
                 <img src="./images/${value.image}">
                 <div class="ttr1" >${value.name} </div>
                 <div class="ttr2" >${value.prix} </div>
-                <button class="sub" onClick()=addToCard(${key}) > add to card </button>
+                <button class="sub" onClick="addToCard(${key})" > add to card </button>
                 
                 `;
                 container.appendChild(newDiv);
@@ -78,18 +81,20 @@ function addProduit(){
 
 addProduit();
 
-let listProduit = [];
+
 function addToCard(key){
 listProduit[key]=product[key];
+listProduit[key].quantite=1;
 updateData();
 }
 function updateData(){
      listCard.innerHTML="";
     let count=0;
-    let Total=0;
-    listProduit.forEach((value,key) => {
-        Total+= value.prix;
-        count+= value.quantité;
+    let Total1=0;
+    listProduit.forEach((value) => {
+        Total1 = Number( Total1) +Number(value.prix);
+        count = Number(count) + Number(value.quantite);
+
         let newLi = document.createElement("li");
         newLi.innerHTML= `
         <img src="./images/${value.image}">
@@ -98,5 +103,6 @@ function updateData(){
         `;
         listCard.appendChild(newLi);
     });
-
+    total.innerText= Total1;
+    quantite.innerText=count;
 }

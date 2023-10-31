@@ -18,7 +18,7 @@ body{
     height: 40px;
 }
 
-.quantité {
+.quantite {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -127,4 +127,17 @@ h2 {
 .total:hover {
     background-color: darkmagenta;
     color: black;
+}
+li img{
+    width: 100px;
+    height: 50px;
+    
+}
+li{
+    display: flex;
+    justify-content: space-between;
+    border: solid black 2px;
+    font-weight: bold;
+    margin-top: 20px;
+    padding: 5px;
 }
